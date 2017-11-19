@@ -42,6 +42,11 @@ function home_command(){
 function move_to_command(){
     if(debug){
         print('move_to_command');
+        if(x) print('x: '+x);
+        if (y) print('y: '+y);
+        if (z) print('z: '+z);
+        if (rotation) print('rotation: '+rotation);
+        if(feedrate) print('feedrate: '+feedrate);
     }
 
     return success();
