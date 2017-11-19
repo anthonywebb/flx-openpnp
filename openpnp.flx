@@ -1,5 +1,6 @@
-var FLXARMS16Z10Util = Packages.flx.ide.flxarms16z10.FLXARMS16Z10Util;
+var debug = true;
 
+var FLXARMS16Z10Util = Packages.flx.ide.flxarms16z10.FLXARMS16Z10Util;
 var VectorUtilities = Packages.flx.util.VectorUtilities;
 
 /**********************
@@ -7,54 +8,130 @@ var VectorUtilities = Packages.flx.util.VectorUtilities;
  **********************/
 
 function connect_command(){
+    if(debug){
+        print('connect_command');
+    }
+
     return success();
 }
 
 function enable_command(){
+    if(debug){
+        print('enable_command');
+    }
+
     return success();
 }
 
 function disable_command(){
+    if(debug){
+        print('disable_command');
+    }
+
     return success();
 }
 
 function home_command(){
+    if(debug){
+        print('home_command');
+    }
+
     return success();
 }
 
 function move_to_command(){
+    if(debug){
+        print('move_to_command');
+    }
+
     return success();
 }
 
 function pick_command(){
+    if(debug){
+        print('pick_command');
+    }
+
     return success();
 }
 
 function place_command(){
+    if(debug){
+        print('place_command');
+    }
+
     return success();
 }
 
 function pump_on_command(){
+    if(debug){
+        print('pump_on_command');
+    }
+
     return success();
 }
 
 function pump_off_command(){
+    if(debug){
+        print('pump_off_command');
+    }
+
     return success();
 }
 
 function actuate_boolean_command(){
+    if(debug){
+        print('actuate_boolean_command');
+    }
+
     return success();
 }
 
 function actuate_double_command(){
+    if(debug){
+        print('actuate_double_command');
+    }
+
     return success();
 }
 
 function actuator_read_command(){
+    if(debug){
+        print('actuator_read_command');
+    }
+
     return success();
 }
 
 function post_vision_home_command(){
+    if(debug){
+        print('post_vision_home_command');
+    }
+
+    return success();
+}
+
+function pre_dispense_command(){
+    if(debug){
+        print('pre_dispense_command');
+    }
+
+    return success();
+}
+
+function dispense_command(){
+    if(debug){
+        print('dispense_command');
+    }
+
+    return success();
+}
+
+function post_dispense_command(){
+    if(debug){
+        print('post_dispense_command');
+    }
+
     return success();
 }
 
