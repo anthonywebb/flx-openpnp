@@ -49,6 +49,31 @@ function move_to_command(){
         if(feedrate) print('feedrate: '+feedrate);
     }
 
+    var machineWorkspace = FLX.getWorkspace();
+    
+    var workspaceMachine = machineWorkspace.getMachine("ALLY");
+    
+    if(!workspaceMachine)
+    {
+        return error("Machine not defined");
+    }
+    
+    var workspacePoint = VectorUtilities.getVector(x, y, z);
+    
+    var util = new FLXARMS16Z10Util(machineWorkspace, workspaceMachine);
+    
+    try{
+        var operation = util.createMoveWorkspaceOperation(workspacePoint, feedrate/60.0);
+        
+        if(!util.runBlockingWaitOperation(operation))
+        {
+            return error("Move Failed");
+        }
+    }catch(ex)
+    {
+        return error(ex);
+    }
+
     return success();
 }
 
@@ -149,7 +174,9 @@ function success()
     return "ok";
 }
 
-function error()
+function error(msg)
 {
+    print('error');
+    print(msg);
     return "error";   
 }
